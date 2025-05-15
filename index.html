@@ -290,7 +290,7 @@
             border-radius: 4px;
         }
 
-        .experience, .education, .certification, .contact, .projects {
+        .experience, .education, .certification, .contact, .projects, .why-choose-me {
             padding: 3rem 0;
         }
 
@@ -866,6 +866,86 @@
     }
 }
 
+/* Why Choose Me Section */
+.why-choose-me {
+    background: linear-gradient(135deg, rgba(255, 126, 185, 0.1), rgba(122, 252, 255, 0.1));
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 3rem;
+}
+
+.qualities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.quality-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.quality-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow);
+}
+
+.quality-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+.quality-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.quality-card h3 i {
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
+.quality-card p {
+    margin-left: 2.3rem;
+}
+
+.quality-highlight {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+/* Pulse Animation for Icons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.quality-card:hover h3 i {
+    animation: pulse 1.5s infinite;
+}
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -914,6 +994,63 @@
                 Download Resume <i class="fas fa-download"></i>
               </a>
               
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- New Why Choose Me Section -->
+        <section class="why-choose-me" data-scroll>
+            <h2 class="section-title">Why Choose Me?</h2>
+            <p style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                I bring a unique combination of <span class="quality-highlight">experience</span>, <span class="quality-highlight">passion</span>, and <span class="quality-highlight">technical expertise</span> to every project. Here's what sets me apart:
+            </p>
+            
+            <div class="qualities-grid">
+                <div class="quality-card">
+                    <h3><i class="fas fa-laptop-code"></i> Experienced Coder</h3>
+                    <p><span class="quality-highlight">4+ years</span> of coding experience across multiple programming languages, with a deep understanding of both frontend and backend development.</p>
+                </div>
+                
+                <div class="quality-card">
+                    <h3><i class="fas fa-heart"></i> Passion-Driven</h3>
+                    <p>Coding isn't just my job - it's my <span class="quality-highlight">hobby</span> and passion. I build functional projects from scratch for fun and continuously expand my skills.</p>
+                </div>
+                
+                <div class="quality-card">
+                    <h3><i class="fas fa-project-diagram"></i> Project Expertise</h3>
+                    <p>I've developed <span class="quality-highlight">complex, functional projects</span> from the ground up, handling everything from concept to deployment.</p>
+                </div>
+                
+                <div class="quality-card">
+                    <h3><i class="fas fa-brain"></i> Broad Knowledge</h3>
+                    <p><span class="quality-highlight">Wide-ranging expertise</span> in programming concepts and the ability to quickly learn and adapt to any language or framework required.</p>
+                </div>
+                
+                <div class="quality-card">
+                    <h3><i class="fas fa-layer-group"></i> Fullstack Mastery</h3>
+                    <p>Proficient with multiple <span class="quality-highlight">backend frameworks</span> and <span class="quality-highlight">frontend technologies</span>, including REST API development and integration.</p>
+                </div>
+                
+                <div class="quality-card">
+                    <h3><i class="fas fa-tachometer-alt"></i> Performance Focused</h3>
+                    <p>I build <span class="quality-highlight">fast, efficient systems</span> with intuitive user interfaces that deliver exceptional user experiences.</p>
+                </div>
+                
+                <div class="quality-card">
+                    <h3><i class="fas fa-database"></i> Database Skills</h3>
+                    <p>Skilled at handling <span class="quality-highlight">backend functions</span> and <span class="quality-highlight">database management</span> simultaneously for seamless data flow.</p>
+                </div>
+                
+                <div class="quality-card">
+                    <h3><i class="fas fa-bullseye"></i> Precision Delivery</h3>
+                    <p>I deliver solutions that match <span class="quality-highlight">almost exactly</span> what the project needs in terms of both functionality and design.</p>
+                </div>
+                
+                <div class="quality-card">
+                    <h3><i class="fas fa-fire"></i> Works Under Pressure</h3>
+                    <p>Thrives in <span class="quality-highlight">high-pressure situations</span>, maintaining code quality and meeting deadlines without compromising results.</p>
+                </div>
+            </div>
         </section>
 
         <div class="divider"></div>
@@ -1008,7 +1145,7 @@
                     <div class="project-image" style="background: linear-gradient(135deg, #ff7eb9, #7afcff);">
                         <!-- Replace the icon with video -->
                         <video width="100%" height="100%" controls autoplay muted loop style="object-fit: cover;">
-                            <source src="file/Nirms.mp4" type="video/mp4">
+                            <source src="file/NIRMS.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
